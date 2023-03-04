@@ -1,6 +1,6 @@
 FROM ubuntu
 
-EXPOSE 5422
+EXPOSE 5244
 
 WORKDIR /opt/alist
 
