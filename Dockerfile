@@ -9,6 +9,5 @@ USER root
 COPY entrypoint.sh /opt/alist/
 
 RUN apt-get update && \
-    apt-get install -y wget && \
-            curl unzip iproute2 systemctl
+    apt-get install -y wget curl unzip iproute2 systemctl
 ENTRYPOINT [ "/opt/alist/entrypoint.sh" ]
