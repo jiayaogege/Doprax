@@ -1,13 +1,12 @@
-FROM xhofe/alist:latest
+FROM nginx:latest
 LABEL MAINTAINER="i@nn.ci"
-EXPOSE 5244
+EXPOSE 80
 
 WORKDIR /opt/alist
 
 USER root
-
-COPY entrypoint.sh /opt/alist/
-
-RUN apt-get update && \
-    apt-get install -y wget curl unzip iproute2 systemctl
-ENTRYPOINT [ "/opt/alist/entrypoint.sh" ]
+COPY nginx.conf /etc/nginx/nginx.conf
+RUN chmod -R 777 /opt/alist/data
+ADD alist.sh /alist.sh
+RUN chmod +x /alist.sh
+CMD /alist.sh
