@@ -1,6 +1,6 @@
 FROM nginx:latest
 LABEL MAINTAINER="i@nn.ci"
-EXPOSE 443
+EXPOSE 80
 WORKDIR /opt/alist
 USER root
 RUN mkdir -p /opt/alist/data/
