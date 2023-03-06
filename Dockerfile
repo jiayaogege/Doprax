@@ -1,6 +1,5 @@
-FROM nginx:latest
+FROM xhofe/alist:v3.12.2
 LABEL MAINTAINER="i@nn.ci"
-EXPOSE 80
 WORKDIR /opt/alist
 USER root
 RUN mkdir -p /opt/alist/data/
