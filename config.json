@@ -1,7 +1,7 @@
 {
   "force": false,
   "address": "0.0.0.0",
-  "port": 5244,
+  "port": 80,
   "site_url": "",
   "cdn": "",
   "jwt_secret": "McWUcSlBBfkM2GpZ",
