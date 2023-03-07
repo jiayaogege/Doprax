@@ -1,8 +1,8 @@
 FROM xhofe/alist:latest
 LABEL MAINTAINER="i@nn.ci"
 EXPOSE 5244
-WORKDIR /
+WORKDIR /opt/alist/
 USER root
-ADD alist.sh /alist.sh
-RUN chmod +x /alist.sh
-CMD /alist.sh server
+ADD alist.sh /opt/alist/alist.sh
+RUN chmod +x /opt/alist/alist.sh
+CMD /opt/alist/alist.sh server
